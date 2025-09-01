@@ -14,7 +14,7 @@ It allows two players to take turns, place their marks, and determines the winne
 
 1. Navigate to the folder containing the code (e.g. `main.c`):
    ```bash
-   cd C:\Users\MOMIGI\Documents\C
+   cd C:\Users\Your_UserName\Documents\C
    ```
 
 2. Compile the code with GCC:
