@@ -44,16 +44,14 @@ bool isValidMove(int row,int col){
     if(board[row][col] == ' ' && row >= 0 && row < 3 && col >= 0 && col < 3){
         return true;
     }
+    printf("Invalid choice of row and column,TRY AGAIN!\n");
     return false;
 }
 
 void makeMove(Player *cp) {
     do {
-        printf("%s (%c),Enter your preferred row (0-2): ", cp->name, cp->mark);
-        scanf("%d", &cp->row);
-
-        printf("%s (%c),Enter your preferred column (0-2): ", cp->name, cp->mark);
-        scanf("%d", &cp->col);
+       printf("%s (%c) Enter your preferred Row and Column (separated by space): ",cp->name,cp->mark);
+       scanf("%d %d",&cp->row,&cp->col);
 
     } while (!isValidMove(cp->row, cp->col));
 
@@ -99,7 +97,7 @@ bool checkDraw(){
 
 int main()
 {
-    printf("---------------------WELCOME TO MY TICTACTOE GAME---------------------\n");
+  printf("---------------------WELCOME TO MY TICTACTOE GAME---------------------\n");
  
   printf("Enter Player 1's name: ");
   scanf("%s",&p1.name);
@@ -141,6 +139,3 @@ int main()
 
     return 0;
 }
-
-
-
